@@ -39,13 +39,13 @@ Donde `vr` es la velocidad de la rueda derecha, `vl` la de la rueda izquierda, y
 
 ### Pasos
 
-1. Clonar este repositorio:
+1. Clonar este repositorio en alguna carpeta de su dispositivo:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DEL_REPOSITORIO>
    ```
 
-2. Abrir Webots y cargar el mundo:
+2. Abrir Webots y cargar el mundo clonado:
    - Ir a **File → Open World**
    - Seleccionar el archivo `worlds/Laboratorio1.wbt`
 
