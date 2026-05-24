@@ -70,7 +70,7 @@ La toma de decisiones se estructuró mediante una arquitectura de control por ca
 
 ---
 
-## Experimentos realizados (Cruda vs Filtrada vs Kalman)
+## 8. Experimentos realizados (Cruda vs Filtrada vs Kalman)
 A continuación se presenta el comportamiento de las lecturas a lo largo del tiempo durante la navegación reactiva en ambos escenarios.
 
 ### **Escenario 1 - Fácil**
