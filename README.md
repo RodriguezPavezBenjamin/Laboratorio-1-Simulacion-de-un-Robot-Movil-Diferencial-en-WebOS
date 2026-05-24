@@ -21,9 +21,11 @@ Para este laboratorio se utilizó el robot **e-puck**, el cual opera como un sis
 
 ## 3. Frecuencia de Muestreo Empleada
 Las lecturas de los sensores y encoders se registraron de forma síncrona utilizando el paso de simulación básico de Webots (`TIME_STEP`). 
-* **Tiempo de muestreo:** $T_{s} =$ [Ej: 0.032] segundos.
-* **Frecuencia de muestreo:** $f_{s} = \frac{1}{T_{s}} =$ [Ej: 31.25] Hz.
-* **Muestras registradas:** [Ej: 4500] muestras por experimento, recolectadas mediante el sistema de guardado analítico del controlador.
+* **Tiempo de muestreo:** $T_{s} =$  0.016 segundos (16 ms).
+* **Frecuencia de muestreo:** $f_{s} = \frac{1}{T_{s}} =$ 62.5 Hz.
+* **Muestras registradas:** Se recolectaron datos durante toda la ejecución de las pruebas, resultando en:
+  * **~3,750 muestras** para el Escenario Simple (60 segundos app de prueba).
+  * **~7,375 muestras** para el Escenario Complejo (120 segundos app de prueba).
 
 ---
 
@@ -68,19 +70,43 @@ La toma de decisiones se estructuró mediante una arquitectura de control por ca
 
 ---
 
-## Experimentos realizados
+## Experimentos realizados (Cruda vs Filtrada vs Kalman)
+A continuación se presenta el comportamiento de las lecturas a lo largo del tiempo durante la navegación reactiva en ambos escenarios.
 
-FALTA REALIZAR EXPERIMENTOS
+### **Escenario 1 - Fácil**
+- La mayor parte del tiempo, la distancia se mantiene constante en el límite máximo de 0.06 metros (6 cm), formando una línea plana. Esto refleja que el robot tuvo mucho espacio libre ("Camino Libre").
+- Se puede ver claramente los 4 "valles" principales (cerca de los 11s, 25s, 37s y 55s). Cada vez que la línea azul del Filtro de Kalman cruza hacia abajo la línea roja punteada (Umbral de Seguridad en 0.05m), el robot activa exitosamente su evasión.
+
+**Gráfico del Escenario Simple**
+<img width="1000" height="500" alt="escenario_facil" src="https://github.com/user-attachments/assets/4d95c0d3-2c63-47fb-b87d-5284dbe8112c" />
+
+### **Escenario 2 - Complejo**
+- A diferencia del primer escenario, aquí el robot pasa muy poco tiempo en "Camino Libre". Desde el segundo 3 hasta casi el final, las señales están en constante movimiento.
+- Al fijarnos en el comportamiento del gráfico entre los 40 y los 60 segundos y luego entre los 70 y 90 segundos. Las caídas son constantes y profundas (llegando incluso a los 0.041m). La línea azul (Kalman) se muestra mucho más suave y decidida en sus picos comparada con la línea gris discontinua (Señal Cruda), lo que demuestra matemáticamente por qué el robot no se quedó "temblando" en los rincones del laberinto.
+
+**Gráfico del Escenario Complejo**
+<img width="1000" height="500" alt="escenario_complejo" src="https://github.com/user-attachments/assets/9bf3786b-5955-4eff-9858-10b27028ae93" />
 
 ---
 
 ## 9. Resultados en Escenarios de Prueba
-Se diseñaron dos entornos en Webots:
-1. **Escenario Simple:** Entorno de ajedrez con tres obstáculos cúbicos de madera. El robot logró evadirlos fluidamente sin colisiones, estabilizando su línea de marcha rápidamente tras cada maniobra.
-2. **Escenario Complejo:** Laberinto estrecho construido con cajas y elementos curvos. La implementación de la "Capa de Deslizamiento" y la "Memoria de Giro" demostraron ser vitales, permitiendo al robot sortear pasillos ciegos y vueltas de 90° sin atascarse en mínimos locales.
+Se diseñaron dos entornos en Webots para evaluar el rendimiento cuantitativo del controlador:
+1. **Escenario Simple:** Entorno de ajedrez con tres obstáculos cúbicos de madera. 
+   * **Tiempo de ejecución:** 60 segundos.
+   * **Maniobras de evasión:** 9 maniobras.
+   * **Colisiones registradas:** 0.
+   * *Observación:* El robot logró evadirlos fluidamente, estabilizando su línea de marcha rápidamente tras cada maniobra sin dudar.
+2. **Escenario Complejo:** Laberinto estrecho construido con cajas y elementos curvos. 
+   * **Tiempo de ejecución:** 118 segundos.
+   * **Maniobras de evasión:** 22 maniobras.
+   * **Colisiones registradas:** 0.
+   * *Observación:* La implementación de la "Capa de Deslizamiento" y la "Memoria de Giro" demostraron ser vitales, permitiendo al robot sortear pasillos ciegos y vueltas de 90° continuas (llegando hasta 4.1 cm de distancia) sin atascarse en mínimos locales.
+
+---
 
 ## 10. Conclusiones
-FALTA AGREGAR CONCLUSIONES SEGÚN EL EXPERIMENTO
+El sistema demostró ser robusto en ambos entornos, alcanzando 0 colisiones en los dos escenarios a pesar de las diferencias de complejidad entre ellos. La arquitectura de control por capas fue determinante para el buen desempeño. La capa de Kalman actúa de forma anticipada cuando la distancia estimada baja de 5 cm, mientras que la capa de pánico funciona como red de seguridad ante acercamientos bruscos que el filtro podría suavizar en exceso. La combinación de ambas cubrió todos los casos registrados sin necesidad de colisionar. Respecto al filtrado, el filtro exponencial (α = 0.3) introduce un retardo perceptible ante cambios rápidos, lo que en principio podría retrasar una decisión de evasión. Sin embargo, dado que la toma de decisiones se basa en la estimación de Kalman y no en la señal filtrada directamente, este retardo no impactó negativamente en la seguridad del robot. La estimación de Kalman resultó más reactiva que el filtro exponencial y más estable que la señal cruda, comportándose como el punto intermedio más adecuado para la toma de decisiones en tiempo real. El escenario complejo mostró mayor cantidad de evasiones (~11.2/min vs ~9.4/min) y distancias mínimas más bajas (4.1 cm vs 4.8 cm), evidenciando que el entorno exige más al sistema. Aun así, el rendimiento en seguridad fue idéntico, lo que sugiere que la lógica implementada escala bien a entornos más desafiantes. 
+Finalmente, la fusión sensorial mediante el filtro de Kalman validó su utilidad frente al uso exclusivo de señales crudas o filtradas: al combinar la predicción de movimiento con la percepción del entorno, el robot logra anticipar obstáculos de forma más confiable, reduciendo la dependencia de reacciones de último momento.
 
 ---
 
