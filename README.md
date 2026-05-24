@@ -1,4 +1,4 @@
-# Laboratorio 1: Simulación de un Robot Móvil Diferencial en Webots
+# Laboratorio 2: Simulación de un Robot Móvil Diferencial en Webots
 
 **Curso:** Robótica y Sistemas Autónomos 2026-01 — ICI 4150  
 **Robot:** E-puck (diferencial de dos ruedas)  
