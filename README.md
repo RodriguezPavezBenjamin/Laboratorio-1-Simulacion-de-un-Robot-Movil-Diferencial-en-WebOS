@@ -48,9 +48,10 @@ Se aplicó un filtro paso bajo exponencial (Filtro Alfa) sobre el mínimo de las
 ### 6.2 Filtro de Kalman
 Se implementó un esquema de estimación para combinar la predicción de movimiento con la percepción del entorno.
 * **Etapa de Predicción:** Se estimó el valor futuro de la distancia frontal restando el avance calculado por los encoders al estado anterior. Matemáticamente, se basa en la actualización del estado:
-  $$\hat{d}_{k}^{-} = \hat{d}_{k-1} + \Delta d_{k}$$
+ $$\hat{d}_{k}^{-} = \hat{d}_{k-1} - \Delta d_{k}$$
 * **Etapa de Corrección:** La predicción se ajustó utilizando la medición cruda del sensor frontal ($z_k$). El peso de esta corrección lo dictó la Ganancia de Kalman ($K_k$), la cual se calcula dinámicamente evaluando la covarianza de la predicción ($P_k^-$) frente a la varianza del ruido del sensor ($R$):
   $$K_{k} = \frac{P_{k}^{-}}{P_{k}^{-} + R}$$
+  $$\hat{d}_{k} = \hat{d}_{k}^{-} + K_{k}(z_{k} - \hat{d}_{k}^{-})$$
   
 ## 7. Lógica de Navegación Reactiva Implementada
 La toma de decisiones se estructuró mediante una arquitectura de control por capas basándose en la distancia frontal estimada:
