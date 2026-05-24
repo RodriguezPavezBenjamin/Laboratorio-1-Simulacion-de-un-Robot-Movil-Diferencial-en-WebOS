@@ -1,0 +1,128 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/balls/protos/FifaSoccerBall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/BeerBottle.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/Can.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/computers/protos/ComputerMouse.proto"
+
+WorldInfo {
+  info [
+    ""
+  ]
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.03614445354425704 -0.9971799245714043 0.06577063561921724 5.27579954045525
+  position -1.8961511446189137 -0.2336445026247847 2.070808987858303
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.00219207 -0.00128623 1.33227e-15
+  rotation 0 0 -1 0.0654498
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+BiscuitBox {
+  translation 0.314824880559495 0.10937150047501112 -7.847998817301152e-05
+  rotation 1.2202821910694253e-16 -6.431896389084343e-16 -1 0.05850331131575192
+  name "biscuit box(1)"
+}
+BiscuitBox {
+  translation 0.1503328952691074 0.05977682608363293 -7.847455054998259e-05
+  rotation 4.473457642971118e-05 4.248637342358073e-05 -0.999999998096863 1.6228296055478184
+  name "biscuit box(2)"
+}
+BiscuitBox {
+  translation 0.36650027529280227 -0.16046780145917353 -7.846985147572094e-05
+  rotation -8.979833478738105e-08 -3.4780474495040404e-07 -0.9999999999999356 1.5909911917081578
+  name "biscuit box(3)"
+}
+BiscuitBox {
+  translation 0.2072031525090041 -0.24065931981657301 -7.849906890540492e-05
+  rotation -0.00010914321828355541 -5.899024849726126e-05 0.9999999923039542 0.03543374402817792
+  name "biscuit box(4)"
+}
+BiscuitBox {
+  translation -0.0028856161485177924 -0.2465061970527435 -7.846425336763621e-05
+  rotation 7.095969992907536e-05 0.005941840954373171 -0.9999823445895403 0.02610873986058258
+  name "biscuit box(5)"
+}
+BiscuitBox {
+  translation 0.08637212614608372 0.3729777334754665 -7.848066056411612e-05
+  rotation 2.7854196029608287e-08 -1.2155622553816622e-07 -0.9999999999999922 0.046272154773437796
+  name "biscuit box(6)"
+}
+BiscuitBox {
+  translation -0.22745109841991998 0.1535427128625316 -7.848831149340901e-05
+  rotation -1.61521264338911e-05 3.973512631773038e-06 -0.99999999986166 0.07831542460053824
+  name "biscuit box(8)"
+}
+BiscuitBox {
+  translation -0.076983344123454 0.3058382427637093 -7.848226364582517e-05
+  rotation -2.3716660127958292e-07 2.1391968329584366e-07 0.9999999999999489 1.5226428034863122
+  name "biscuit box(7)"
+}
+BiscuitBox {
+  translation -0.24284286925509674 -0.08645760777123936 -7.843499061301398e-05
+  rotation -0.00026730501453006125 7.015831613887338e-05 -0.9999999618129191 0.06571533698273097
+  name "biscuit box(9)"
+}
+BiscuitBox {
+  translation -0.011586562052455285 -9.66615632651771e-06 -7.848576177036173e-05
+  rotation 0.023309380679726304 -0.14228500724994889 0.9895512364118444 0.0003624526536183157
+  name "biscuit box(11)"
+}
+BiscuitBox {
+  hidden linearVelocity_0 1.2665050893377144e-11 1.738507222022295e-10 -1.0826361064338262e-12
+  hidden angularVelocity_0 1.7663337011518887e-09 -1.175498326093026e-10 -1.7757848794323246e-10
+  translation -0.4062656644752473 -0.43578887562839524 -7.847998950492527e-05
+  rotation -8.587191040912202e-09 -8.0268495785105e-09 -0.9999999999999998 1.6362461251760967
+  name "biscuit box(10)"
+}
+BeerBottle {
+  translation -0.4763016124639428 -0.06316319469999127 0.00042149293663895637
+  rotation 0.06534685747317925 0.9968740045301584 0.044407288933074926 0.0011084752641107435
+}
+Can {
+  translation -0.433775 0.494304 0.06103133001037074
+  rotation -0.7352524580111487 -0.6747728756671177 0.06391704977932386 3.954725933027374e-17
+}
+BeerBottle {
+  translation 0.1817938429119558 0.4501991347141417 0.00042152001182700627
+  rotation 1.35070357721495e-06 1.3456929474618663e-06 -0.9999999999981823 1.2772317288123786e-06
+  name "beer bottle(1)"
+}
+FifaSoccerBall {
+  translation 0.368934 -0.410437 0.11216253604803485
+}
+ComputerMouse {
+  translation -0.444962 0.16236 0
+  rotation 0 0 1 1.3679
+}
+BeerBottle {
+  translation -0.11326096783845818 -0.4640940978380218 0.00042144220252612885
+  rotation -0.9974975802717685 0.0648065413109401 0.028261096144348442 0.0018928049867917428
+  name "beer bottle(2)"
+}
+BeerBottle {
+  translation -0.3000020683970779 -0.36774163655850683 0.00042151984642799234
+  rotation -9.345359807378795e-08 1.4797698157046992e-08 0.9999999999999957 -2.8797950553636467
+  name "beer bottle(3)"
+}
+E-puck {
+  hidden position_0_0 1529.608344702642
+  hidden position_0_1 1577.2752236231136
+  hidden rotation_1 0 1 0 4.858466205007558
+  hidden rotation_2 0 -1 0 6.210089194418682
+  translation 0.463562 0.406192 -2.22739e-05
+  rotation -0.0019123903268246957 3.1039605304622925e-05 -0.9999981708982175 -3.108815307179586
+  controller "epuck_Lab2"
+}
