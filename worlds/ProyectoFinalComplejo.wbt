@@ -9,8 +9,8 @@ EXTERNPROTO "../protos/Fox.proto"
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.19992967400543077 -0.10240891501229568 0.9744437077523188 4.012947434381046
-  position 7.575888871319993 7.869489048183712 4.302676314086638
+  orientation -0.36772230307992243 -0.4814653359025292 0.7955950214410986 4.723620570619284
+  position -2.215131911693401 10.384260129302014 11.60072425764444
 }
 TexturedBackground {
 }
@@ -26,12 +26,12 @@ Cow {
   name "cow(12)"
 }
 Cow {
-  translation 0 -1.8 0
+  translation 1.50819 -1.49881 -1.59872e-14
   rotation -2.3559899999934615e-06 9.590549999973383e-09 -0.9999999999972247 -3.1415853071795863
   name "cow(1)"
 }
 Cow {
-  translation 1.8 -1.8 0
+  translation 4.18003 -0.211305 0
   rotation -2.373529999992219e-06 -9.606759999968507e-07 -0.9999999999967217 -2.356185307179586
   name "cow(8)"
 }
@@ -46,8 +46,8 @@ Cow {
   name "cow(3)"
 }
 Cow {
-  translation 1.8 -0.9 0
-  rotation 2.3504499999913028e-06 -1.369819999994931e-06 0.9999999999962996 -2.094405307179586
+  translation 3.50391 -1.33726 0
+  rotation 2.359969999992326e-06 9.66295999996858e-07 0.9999999999967484 2.35618
   name "cow(13)"
 }
 Cow {
@@ -56,7 +56,7 @@ Cow {
   name "cow(6)"
 }
 Cow {
-  translation 0.9 0 0
+  translation 0.749602 0.296737 0
   rotation -2.3559899999934615e-06 9.590549999973383e-09 -0.9999999999972247 -3.1415853071795863
   name "cow(2)"
 }
@@ -88,16 +88,16 @@ Cow {
 RobotstadiumSoccerField {
 }
 Fox {
-  translation 1.8 -2.7 0
+  translation -1.61647 -0.751071 0
 }
 Fox {
-  translation 3.6 3.6 0
+  translation -3.16466 2.47529 -8.88178e-15
   rotation 0 0 1 -0.523595307179586
   name "fox(8)"
 }
 Fox {
-  translation 4.4 3.6 0
-  rotation 4.064099999955249e-06 -2.3464099999741633e-06 0.9999999999889888 1.0472
+  translation 2.51119 1.30767 2.39808e-13
+  rotation -3.057909999977285e-06 -2.34641999998257e-06 0.9999999999925717 -1.3089953071795861
   name "fox(9)"
 }
 Fox {
@@ -106,58 +106,56 @@ Fox {
   name "fox(10)"
 }
 Fox {
-  translation 1.8 1.8 0
+  translation 1.64466 1.38385 0
   name "fox(11)"
 }
 Fox {
-  translation -4.4 -3.6 0
+  translation -0.432454 1.90573 -8.88178e-15
   rotation 0 0 1 4.6928e-06
   name "fox(1)"
 }
 Fox {
-  translation -3.6 -3.6 0
+  translation 1.04445 -0.587725 -1.80411e-15
   rotation 0 0 1 1.0472
   name "fox(12)"
 }
 Fox {
-  translation -2.8 -3.6 0
+  translation -4.16792 2.41902 -2.4869e-14
   rotation 0 0 1 -1.3089953071795861
   name "fox(5)"
 }
 Fox {
-  translation -2.0 -3.6 0
+  translation 3.04853 -0.465024 0
   rotation 0 0 1 1.0472
   name "fox(4)"
 }
 Fox {
-  translation -1.2 -3.6 0
+  translation -1.91643 2.58021 -5.32907e-15
   rotation 0 0 1 -0.785395307179586
   name "fox(7)"
 }
 Fox {
-  translation -0.4 -3.6 0
+  translation 3.90568 1.06406 1.77636e-15
   rotation 0 0 1 -1.047195307179586
   name "fox(6)"
 }
 Fox {
-  translation 0.4 -3.6 0
+  translation -1.0772 -2.1923 -1.24345e-14
   rotation 0 0 -1 -5.307179586466759e-06
   name "fox(3)"
 }
 Fox {
-  translation 1.2 -3.6 0
+  translation 2.85137 -1.76991 0
   rotation 0 0 1 0.785403
   name "fox(13)"
 }
 Fox {
-  translation -3.6 0.9 0
+  translation -4.71891 0.0202821 3.97904e-13
   rotation 0 0 1 -1.047195307179586
   name "fox(2)"
 }
 Robot {
   translation -4.5 0 0
-  rotation 0 0 1 0
-  customData "complex"
   children [
     GPS {
     }
@@ -181,7 +179,7 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_LEFT_WHEEL Solid {
-        translation 0 0.025999999999999995 0.02
+        translation 0 0.02599999999999987 0.02
         rotation 0 -0.9999999999999999 0 3.748603605065428
         children [
           DEF EPUCK_WHEEL Pose {
@@ -314,8 +312,6 @@ Robot {
           density -1
           mass 0.005
         }
-        linearVelocity 0.05775974244536955 0.002117305397637522 -2.0077145319153713e-06
-        angularVelocity -0.11408524444977192 3.125493472437235 -2.2964524597703218
       }
     }
     HingeJoint {
@@ -349,8 +345,6 @@ Robot {
         name "right wheel"
         boundingObject USE EPUCK_WHEEL_BOUNDING_OBJECT
         physics USE EPUCK_WHEEL_PHYSICS
-        linearVelocity -0.05833924587426733 -0.0020112447640469283 -1.8894948751847095e-06
-        angularVelocity 0.11631011960163767 -3.1544736447560844 -2.2962568273802497
       }
     }
     DEF BATTERY_CONNECTOR Pose {
@@ -1736,6 +1730,7 @@ Robot {
     ]
   }
   controller "delantero_controller"
+  customData "complex"
   cpuConsumption 1.11
   remoteControl "e-puck_bluetooth"
 }

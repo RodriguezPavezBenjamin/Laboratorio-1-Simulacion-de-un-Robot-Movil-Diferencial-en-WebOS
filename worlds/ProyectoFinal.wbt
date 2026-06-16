@@ -9,101 +9,72 @@ EXTERNPROTO "../protos/Fox.proto"
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.19992967400543077 -0.10240891501229568 0.9744437077523188 4.012947434381046
-  position 7.575888871319993 7.869489048183712 4.302676314086638
+  orientation -0.1800415316852697 -0.1912333068312344 0.9648911178090577 4.677361613169565
+  position 0.7781623683398591 11.29927329130965 5.408603494357299
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Cow {
-  translation -3.9 2.4 0
-  rotation -2.3559899999934615e-06 9.590549999973383e-09 -0.9999999999972247 -3.1415853071795863
-  name "cow(12)"
-}
-Cow {
-  translation -2.7 2.4 0
-  rotation -2.3559899999934615e-06 9.590549999973383e-09 -0.9999999999972247 -3.1415853071795863
-  name "cow(1)"
-}
-Cow {
-  translation -2.8 -1.2 0
-  rotation -2.373529999992219e-06 -9.606759999968507e-07 -0.9999999999967217 -2.356185307179586
-  name "cow(8)"
-}
-Cow {
-  translation -2.2 -0.2 0
-  rotation -2.3572499999933446e-06 -3.0058199999915134e-07 -0.9999999999971765 -2.8797853071795863
+  translation -1.04014 0.345168 3.55271e-15
+  rotation -2.3773299999867e-06 -2.3531899999868345e-06 -0.9999999999944054 -1.5707853071795865
   name "cow(4)"
 }
 Cow {
-  translation -3.2 0.8 0
-  rotation 2.3504499999913028e-06 -1.369819999994931e-06 0.9999999999962996 -2.094405307179586
-  name "cow(10)"
+  translation -0.650833 0.407587 -1.77636e-15
+  rotation -2.3773299999867e-06 -2.3531899999868345e-06 -0.9999999999944054 -1.5707853071795865
+  name "cow(3)"
+}
+Cow {
+  translation -1.3597 0.322873 -2.66454e-15
+  rotation -2.3773299999867e-06 -2.3531899999868345e-06 -0.9999999999944054 -1.5707853071795865
+  name "cow(2)"
+}
+Cow {
+  translation -1.69717 0.329291 -7.01661e-14
+  rotation -2.3773299999867e-06 -2.3531899999868345e-06 -0.9999999999944054 -1.5707853071795865
+  name "cow(5)"
+}
+Cow {
+  translation -4.53142 0.132067 -1.45661e-13
+  rotation -0.0020107593795322546 -0.3940338784114526 0.9190937163917215 -1.5307179586088182e-05
+  name "cow(6)"
+}
+Cow {
+  translation -0.209039 0.382767 -8.88178e-16
+  rotation -2.3773299999867e-06 -2.3531899999868345e-06 -0.9999999999944054 -1.5707853071795865
+  name "cow(1)"
 }
 RobotstadiumSoccerField {
 }
 Fox {
-  translation 1.8 -1.8 0
-}
-Fox {
-  translation 0 -0.9 0
-  rotation 0 0 1 1.0472
+  translation 0.641585 0.301492 -5.50671e-14
+  rotation 0 0 1 1.5708
   name "fox(10)"
 }
 Fox {
-  translation 1.8 1.8 0
-  name "fox(11)"
+  translation 0.889982 0.278732 8.88178e-16
+  rotation 0 0 1 1.5708
+  name "fox(2)"
 }
 Fox {
-  translation -4.4 -3.6 0
-  rotation 0 0 1 4.6928e-06
-  name "fox(1)"
-}
-Fox {
-  translation -3.6 -3.6 0
-  rotation 0 0 1 1.0472
-  name "fox(12)"
-}
-Fox {
-  translation -2.8 -3.6 0
-  rotation 0 0 1 -1.3089953071795861
-  name "fox(5)"
-}
-Fox {
-  translation -2.0 -3.6 0
-  rotation 0 0 1 1.0472
-  name "fox(4)"
-}
-Fox {
-  translation -1.2 -3.6 0
-  rotation 0 0 1 -0.785395307179586
-  name "fox(7)"
-}
-Fox {
-  translation -0.4 -3.6 0
-  rotation 0 0 1 -1.047195307179586
-  name "fox(6)"
-}
-Fox {
-  translation 0.4 -3.6 0
-  rotation 0 0 -1 -5.307179586466759e-06
+  translation 1.21714 0.272788 -6.21725e-15
+  rotation 0 0 1 1.5708
   name "fox(3)"
 }
 Fox {
-  translation 1.2 -3.6 0
-  rotation 0 0 1 0.785403
-  name "fox(13)"
+  translation 3.64267 -1.45707 1.77636e-15
+  rotation 0 0 1 1.5708
+  name "fox(4)"
 }
 Fox {
-  translation -3.6 0.9 0
-  rotation 0 0 1 -1.047195307179586
-  name "fox(2)"
+  translation 0.339812 0.359423 -8.88178e-16
+  rotation 0 0 1 1.5708
+  name "fox(1)"
 }
 Robot {
-  translation -4.5 0 0
-  rotation 0 0 1 0
-  customData "simple"
+  translation -4.21706 0.032482 0
   children [
     GPS {
     }
@@ -127,7 +98,7 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_LEFT_WHEEL Solid {
-        translation 0 0.025999999999999995 0.02
+        translation 0 0.02599999999999994 0.02
         rotation 0 -0.9999999999999999 0 3.748603605065428
         children [
           DEF EPUCK_WHEEL Pose {
@@ -260,8 +231,6 @@ Robot {
           density -1
           mass 0.005
         }
-        linearVelocity 0.05775974244536955 0.002117305397637522 -2.0077145319153713e-06
-        angularVelocity -0.11408524444977192 3.125493472437235 -2.2964524597703218
       }
     }
     HingeJoint {
@@ -295,8 +264,6 @@ Robot {
         name "right wheel"
         boundingObject USE EPUCK_WHEEL_BOUNDING_OBJECT
         physics USE EPUCK_WHEEL_PHYSICS
-        linearVelocity -0.05833924587426733 -0.0020112447640469283 -1.8894948751847095e-06
-        angularVelocity 0.11631011960163767 -3.1544736447560844 -2.2962568273802497
       }
     }
     DEF BATTERY_CONNECTOR Pose {
@@ -1682,6 +1649,7 @@ Robot {
     ]
   }
   controller "delantero_controller"
+  customData "simple"
   cpuConsumption 1.11
   remoteControl "e-puck_bluetooth"
 }
